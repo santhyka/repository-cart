@@ -3,7 +3,7 @@ function scs()
 	simpleCart.empty();
 	$('#pembayaran').show();
 	$('#pemesanan').hide();
-	$('#wesjavacart').hide();
+	$('#mycart').hide();
 }
 function opensucces() {
   var $_GET = {};
@@ -79,9 +79,9 @@ $(document).ready(function(){
 	});
 });
 function shopping_cart (step) {
-	if(step == "wesjavacart")
+	if(step == "mycart")
 	{
-		$('#wesjavacart').show();
+		$('#mycart').show();
 		$('#pemesanan').hide();
 		$('#pembayaran').hide();
 	}
@@ -110,7 +110,7 @@ function shopping_cart (step) {
 			$("[name='smanagerurltoko']").val(url);
 			// open tab
 			$('#pemesanan').show();
-			$('#wesjavacart').hide();
+			$('#mycart').hide();
 			$('#pembayaran').hide();
 		}
 	}
