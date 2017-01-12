@@ -3,7 +3,7 @@ function scs()
 	simpleCart.empty();
 	$('#pembayaran').show();
 	$('#pemesanan').hide();
-	$('#mycart').hide();
+	$('#wesjavacart').hide();
 }
 function opensucces() {
   var $_GET = {};
@@ -58,7 +58,7 @@ $(document).ready(function(){
 		var smanagerurl       			= $("[name='smanagerurl']").val();
 
 	    $.ajax({
-	      	url: "",
+	      	url: "http://files.themelate.com/blogshop/checkout.php?from=ajax",
 	      	type: "POST",
 	      	data: {smanagertypemark:smanagertypemark,smanagertypecart:smanagertypecart,smanagertotal:smanagertotal,smanageremail:smanageremail,smanagerisicart:smanagerisicart,smanagerpaymin:smanagerpaymin,smanagerlanguage:smanagerlanguage,smanagertitel:smanagertitel,smanagerlogo:smanagerlogo,smanageraddress:smanageraddress,smanagersurel:smanagersurel,smanagernami:smanagernami,smanagerhenpon:smanagerhenpon,smanagergriyo:smanagergriyo,smanagerpostal:smanagerpostal,smanagermsg:smanagermsg,smanagerurl:smanagerurl},
 	      	success:function(result,status) {
@@ -79,9 +79,9 @@ $(document).ready(function(){
 	});
 });
 function shopping_cart (step) {
-	if(step == "mycart")
+	if(step == "wesjavacart")
 	{
-		$('#mycart').show();
+		$('#wesjavacart').show();
 		$('#pemesanan').hide();
 		$('#pembayaran').hide();
 	}
@@ -110,7 +110,7 @@ function shopping_cart (step) {
 			$("[name='smanagerurltoko']").val(url);
 			// open tab
 			$('#pemesanan').show();
-			$('#mycart').hide();
+			$('#wesjavacart').hide();
 			$('#pembayaran').hide();
 		}
 	}
