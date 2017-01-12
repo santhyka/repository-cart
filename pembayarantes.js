@@ -39,7 +39,7 @@ $(document).ready(function(){
 		event.preventDefault();
 		$("#loading-process").show();
 		// jika salah satu kosong untuk mengisi
-		var smanagertypetanda    		= $("[name='smanagertypetanda    ']").val();
+		var smanagertypetanda    		= $("[name='smanagertypetanda']").val();
 		var smanagertypecart    		= $("[name='smanagertypecart']").val();
 		var smanagertotal      			= $("[name='smanagertotal']").val();
 		var smanageremail    			= cartEmail;
