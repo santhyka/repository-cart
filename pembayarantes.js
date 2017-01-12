@@ -39,7 +39,7 @@ $(document).ready(function(){
 		event.preventDefault();
 		$("#loading-process").show();
 		// jika salah satu kosong untuk mengisi
-		var smanagertypetanda    		= $("[name='smanagertypetanda']").val();
+		var smanagertypemark    		= $("[name='smanagertypemark']").val();
 		var smanagertypecart    		= $("[name='smanagertypecart']").val();
 		var smanagertotal      			= $("[name='smanagertotal']").val();
 		var smanageremail    			= cartEmail;
@@ -60,7 +60,7 @@ $(document).ready(function(){
 	    $.ajax({
 	      	url: "http://files.themelate.com/blogshop/checkout.php?from=ajax",
 	      	type: "POST",
-	      	data: {smanagertypetanda:smanagertypetanda,smanagertypecart:smanagertypecart,smanagertotal:smanagertotal,smanageremail:smanageremail,smanagerisicart:smanagerisicart,smanagerpaymin:smanagerpaymin,smanagerlanguage:smanagerlanguage,smanagertitel:smanagertitel,smanagerlogo:smanagerlogo,smanageraddress:smanageraddress,smanagersurel:smanagersurel,smanagernami:smanagernami,smanagerhenpon:smanagerhenpon,smanagergriyo:smanagergriyo,smanagerpostal:smanagerpostal,smanagermsg:smanagermsg,smanagerurl:smanagerurl},
+	      	data: {smanagertypemark:smanagertypemark,smanagertypecart:smanagertypecart,smanagertotal:smanagertotal,smanageremail:smanageremail,smanagerisicart:smanagerisicart,smanagerpaymin:smanagerpaymin,smanagerlanguage:smanagerlanguage,smanagertitel:smanagertitel,smanagerlogo:smanagerlogo,smanageraddress:smanageraddress,smanagersurel:smanagersurel,smanagernami:smanagernami,smanagerhenpon:smanagerhenpon,smanagergriyo:smanagergriyo,smanagerpostal:smanagerpostal,smanagermsg:smanagermsg,smanagerurl:smanagerurl},
 	      	success:function(result,status) {
 				$("#loading-process").hide();
 	      		response = result.split("|");
