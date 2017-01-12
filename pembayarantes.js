@@ -96,7 +96,7 @@ function shopping_cart (step) {
 		else 
 		{
 			// get detail
-			var detail_cart 		= document.getElementById("tabelCart");
+			var detail_cart 		= document.getElementById("tableCart");
 			var detail_payment 		= document.getElementById("cart-payment");
 			var order_total_count 	= document.getElementById("cart_total");
 			$("[name='smanagerisicart']").val(detail_cart.innerHTML);
