@@ -31,52 +31,7 @@ function opensucces() {
 		alert('Invoice not send!');
 	}
 }
-$(document).ready(function(){
-	//open pembayaran where success
-	opensucces();
-	//ajax
-	$("#shopping_cart_form_biasa").submit(function(event){
-		event.preventDefault();
-		$("#loading-process").show();
-		// jika salah satu kosong untuk mengisi
-		var smanagertypemark    		= $("[name='smanagertypemark']").val();
-		var smanagertypecart    		= $("[name='smanagertypecart']").val();
-		var smanagertotal      			= $("[name='smanagertotal']").val();
-		var smanageremail    			= cartEmail;
-		var smanagerisicart    			= $("[name='smanagerisicart']").val();
-		var smanagerpaymin    			= $("[name='smanagerpaymin']").val();
-		var smanagerlanguage			= $("[name='smanagerlanguage']").val();
-		var smanagertitel	       		= $("[name='smanagertitel']").val();
-		var smanagerlogo	       		= $("[name='smanagerlogo']").val();
-		var smanageraddress    			= $("[name='smanageraddress']").val();
-		var smanagersurel       		= $("[name='smanagersurel']").val();
-		var smanagernami	       		= $("[name='smanagernami']").val();
-		var smanagerhenpon 	      		= $("[name='smanagerhenpon']").val();
-		var smanagergriyo       		= $("[name='smanagergriyo']").val();
-		var smanagerpostal       		= $("[name='smanagerpostal']").val();
-		var smanagermsg       			= $("[name='smanagermsg']").val();
-		var smanagerurl       			= $("[name='smanagerurl']").val();
 
-	    $.ajax({
-	      	url: "http://santhyka.esy.es/koneksi.php?from=ajax",
-	      	type: "POST",
-	      	data: {smanagertypemark:smanagertypemark,smanagertypecart:smanagertypecart,smanagertotal:smanagertotal,smanageremail:smanageremail,smanagerisicart:smanagerisicart,smanagerpaymin:smanagerpaymin,smanagerlanguage:smanagerlanguage,smanagertitel:smanagertitel,smanagerlogo:smanagerlogo,smanageraddress:smanageraddress,smanagersurel:smanagersurel,smanagernami:smanagernami,smanagerhenpon:smanagerhenpon,smanagergriyo:smanagergriyo,smanagerpostal:smanagerpostal,smanagermsg:smanagermsg,smanagerurl:smanagerurl},
-	      	success:function(result,status) {
-				$("#loading-process").hide();
-	      		response = result.split("|");
-				if(response[0] == '"1')
-				{
-					//alert(response[1]);
-					// ajax pengiriman pemesanan
-					scs();
-				}
-				else	
-				{
-					alert(response[1]);
-				}
-			}
-	    });
-	});
 });
 function shopping_cart (step) {
 	if(step == "mycart")
