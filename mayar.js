@@ -58,7 +58,7 @@ $(document).ready(function(){
 		var smanagerurl       			= $("[name='smanagerurl']").val();
 
 	    $.ajax({
-	      	url: "http://santhyka.esy.es/checkout.php?from=ajax",
+	      	url: "http://santhyka.esy.es/koneksi.php?from=ajax",
 	      	type: "POST",
 	      	data: {smanagertypemark:smanagertypemark,smanagertypecart:smanagertypecart,smanagertotal:smanagertotal,smanageremail:smanageremail,smanagerisicart:smanagerisicart,smanagerpaymin:smanagerpaymin,smanagerlanguage:smanagerlanguage,smanagertitel:smanagertitel,smanagerlogo:smanagerlogo,smanageraddress:smanageraddress,smanagersurel:smanagersurel,smanagernami:smanagernami,smanagerhenpon:smanagerhenpon,smanagergriyo:smanagergriyo,smanagerpostal:smanagerpostal,smanagermsg:smanagermsg,smanagerurl:smanagerurl},
 	      	success:function(result,status) {
