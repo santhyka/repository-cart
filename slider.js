@@ -1637,7 +1637,7 @@ $(document).ready(function() {
     var a = "project.dimpost.com",
         b = "flexsliderdemo.blogspot.com",
         c = "http://www.boyatdesign.com",
-        d = "by boyat design",
+        d = "boyat design",
         e = "flexslider",
         f = function() {
             window.location.hostname != a && window.location.hostname != b && ($("." + e).append('<a class="intro" href="' + c + '" rel="dofollow" target="_blank">' + d + "</a>"), $("a.intro").css({
